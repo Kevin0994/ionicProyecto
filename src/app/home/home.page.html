@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item *ngFor="let item of Items">
+    <p>{{item.nombres}}</p>
+  </ion-item>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Inicio</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="search-circle-outline"></ion-icon>
+        <ion-label>Buscar</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="login" (click)="salir()">
+        <ion-icon name="exit-outline"></ion-icon>
+        <ion-label>Salir</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
