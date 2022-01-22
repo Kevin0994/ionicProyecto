@@ -36,9 +36,17 @@ export class LoginPage implements OnInit {
     var form = this.formLogin.value;
     if(this.Cliente.length != 0){
       if(this.Cliente[0].correo == form.correo && this.Cliente[0].password == form.password){
-        console.log('Ingresado');
         localStorage.setItem('ingresado','true');
         this.navCtrl.navigateRoot('home');
+      }else{
+        const alert = await this.alertController.create({
+          header: 'Datos incorrectos',
+          message: 'Los datos no son correctos',
+          buttons: ['OK']
+        });
+  
+        await alert.present();
+        return;
       }
     }else{
       const alert = await this.alertController.create({
@@ -56,8 +64,6 @@ export class LoginPage implements OnInit {
     var form = this.formLogin.value;
     this.proveedor.BuscarCliente(form.correo).then(data => {
       this.Cliente=data;
-      console.log('Impremiendo Items')
-      console.log(this.Cliente);
       this.ingresar();
     }).catch(data => {
       console.log(data);
