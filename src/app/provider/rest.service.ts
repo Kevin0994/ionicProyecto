@@ -14,7 +14,7 @@ export class RestProvider {
   }
 
   loadInfo(){
-    var api_url="http://127.0.0.1:8000/clientes/";
+    var api_url="https://warm-sea-68535.herokuapp.com/clientes/";
     return new Promise(resolve => {
       this.http.get(api_url).subscribe(data => {
         resolve(data);
@@ -25,7 +25,7 @@ export class RestProvider {
   }
 
   BuscarCliente(cliente:any){
-    var api_url="http://127.0.0.1:8000/clientes/?search="+cliente;
+    var api_url="https://warm-sea-68535.herokuapp.com/clientes/?search="+cliente;
     return new Promise(resolve => {
       this.http.get(api_url).subscribe(data => {
         resolve(data);
@@ -36,7 +36,7 @@ export class RestProvider {
   }
 
   InsertarCliente(form:any){
-    var api_url="http://127.0.0.1:8000/clientes/"
+    var api_url="https://warm-sea-68535.herokuapp.com/clientes/"
     return new Promise(resolve => {
       this.http.post(api_url,form).subscribe(data => {
         resolve(data);
