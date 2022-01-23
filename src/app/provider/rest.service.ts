@@ -53,6 +53,15 @@ export class RestProvider {
     });
   }
 
-
+  loadProductos(){
+    var api_url="https://warm-sea-68535.herokuapp.com/clientes/";
+    return new Promise(resolve => {
+      this.http.get(api_url).subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
 
 }

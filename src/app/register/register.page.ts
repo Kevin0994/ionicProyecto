@@ -75,7 +75,7 @@ export class RegisterPage implements OnInit {
         }
       }
     }).catch(data => {
-      
+      console.log(data);
     });
   }
 

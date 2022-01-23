@@ -34,6 +34,17 @@ export class LoginPage implements OnInit {
 
   async ingresar(){
     var form = this.formLogin.value;
+    if(this.formLogin.invalid){
+      const alert = await this.alertController.create({
+        header: 'Datos incompletos',
+        message: 'tienes que llenar todos los datos',
+        buttons: ['OK']
+      });
+
+      await alert.present();
+      return;
+    }
+    
     if(this.Cliente.length != 0){
       if(this.Cliente[0].correo == form.correo && this.Cliente[0].password == form.password){
         localStorage.setItem('ingresado','true');
