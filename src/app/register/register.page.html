@@ -1,47 +1,40 @@
-<ion-header>
-  <ion-toolbar color="primary">
+<ion-header class="ion-no border">
+  <ion-toolbar color="medium">
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-icon name="chevron-back-outline"></ion-icon>
+      <ion-button [routerLink]="['/login']">Crear Cuenta</ion-button>
     </ion-buttons>
-    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Datos</ion-card-title>
-    </ion-card-header>
-    <form [formGroup]="formRegistro">
+    <form [formGroup]="formRegistro" id="form">
       <ion-item>
-        <ion-label position="floating">Nombres</ion-label>
-        <ion-input formControlName="nombre"></ion-input>
+        <ion-input formControlName="nombre" placeholder="Nombres"></ion-input>
       </ion-item>
+      <br>
       <ion-item>
-        <ion-label position="floating">Apellidos</ion-label>
-        <ion-input formControlName="apellido"></ion-input>
+        <ion-input formControlName="apellido" placeholder="Apellidos"></ion-input>
       </ion-item>
+      <br>
       <ion-item>
-        <ion-label position="floating">E-mail</ion-label>
-        <ion-input formControlName="correo"></ion-input>
+        <ion-input formControlName="correo" placeholder="E-mail"></ion-input>
       </ion-item>
+      <br>
       <ion-item>
-        <ion-label position="floating">Telefono</ion-label>
-        <ion-input formControlName="telefono"></ion-input>
+        <ion-input formControlName="telefono" placeholder="Telefono"></ion-input>
       </ion-item>
+      <br>
       <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input formControlName="password" type="password"></ion-input>
+        <ion-input formControlName="password" type="password" placeholder="Password"></ion-input>
       </ion-item>
+      <br>
       <ion-item>
-        <ion-label position="floating">Contraseña</ion-label>
-        <ion-input formControlName="confirPassword" type="password"></ion-input>
+        <ion-input formControlName="confirPassword" type="password" placeholder="Password"></ion-input>
       </ion-item>
+      <br>
+      <ion-button (click)="Registrar()" expand="block" shape="round">Unete a Nosotros</ion-button>
     </form>
-    <br>
-    <ion-button (click)="Registrar()">
-      Registrarse
-    </ion-button>
-  </ion-card>
+    <p>Al presionar 'Unete a Nosotrsos' aceptas <br />nuestros terminos y condiciones. </p>
+    
 </ion-content>

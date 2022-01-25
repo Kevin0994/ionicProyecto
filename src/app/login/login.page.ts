@@ -37,7 +37,7 @@ export class LoginPage implements OnInit {
     if(this.formLogin.invalid){
       const alert = await this.alertController.create({
         header: 'Datos incompletos',
-        message: 'tienes que llenar todos los datos',
+        message: 'Tienes que llenar todos los datos',
         buttons: ['OK']
       });
 
