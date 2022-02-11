@@ -14,10 +14,11 @@ export class HomePage {
   constructor(public proveedor: RestProvider,
     public alertController: AlertController,
     public navCtrl:NavController) {
+      this.loadInfo();
   }
 
   loadInfo(){
-    this.proveedor.loadInfo().then(data => {
+    this.proveedor.loadProductos().then(data => {
       this.Items=data;
       console.log('Impremiendo Items')
       console.log(this.Items);
@@ -26,28 +27,6 @@ export class HomePage {
     })
   }
 
-  async salir(){
-    console.log('Holi');
-    const alert = await this.alertController.create({
-      header: 'Salir',
-      message: '¿Seguro desea salir?',
-      buttons: [
-        {
-          text: 'No',
-          handler: () => {
-
-          }
-        }, {
-          text: 'Si',
-          handler: () => {
-            localStorage.removeItem('ingresado');
-            this.navCtrl.navigateRoot('login');
-          }
-        }
-      ]
-    });
-
-    await alert.present();
-  }
+  
 
 }

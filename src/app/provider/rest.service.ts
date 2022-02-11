@@ -54,7 +54,7 @@ export class RestProvider {
   }
 
   loadProductos(){
-    var api_url="https://warm-sea-68535.herokuapp.com/clientes/";
+    var api_url="https://warm-sea-68535.herokuapp.com/productos/";
     return new Promise(resolve => {
       this.http.get(api_url).subscribe(data => {
         resolve(data);

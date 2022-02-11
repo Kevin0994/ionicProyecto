@@ -4,14 +4,10 @@ import { IngresarGuard } from './ingresar.guard';
 import { NoIngresadoGuard } from './no-ingresado.guard';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
-    canActivate:[IngresarGuard]
-  },
+ 
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'tabs/home',
     pathMatch: 'full'
   },
   {
@@ -23,6 +19,10 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule),
     canActivate:[NoIngresadoGuard]
+  },
+  {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
   },
 ];
 
