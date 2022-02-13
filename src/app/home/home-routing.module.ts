@@ -7,7 +7,12 @@ const routes: Routes = [
     path: '',
     component: HomePage
     
+  },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   }
+
 ];
 
 @NgModule({

@@ -1,23 +1,50 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>JM</ion-title>
+    </ion-toolbar>
 </ion-header>
 
+<div>
+  <ion-segment scrollable value="heart">
+    <ion-segment-button value="vestidos">
+      Vestidos
+    </ion-segment-button>
+    <ion-segment-button value="faldas">
+      Faldas
+    </ion-segment-button>
+    <ion-segment-button value="tops">
+      Tops
+    </ion-segment-button>
+    <ion-segment-button value="pantalones">
+      Pantalones
+    </ion-segment-button>
+    <ion-segment-button value="shorts">
+      Shorts
+    </ion-segment-button>
+    <ion-segment-button value="blusas">
+      Blusas
+    </ion-segment-button>
+    <ion-segment-button value="sandalias">
+      Sandalias
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
 <ion-content padding>
-  <ion-item *ngFor="let item of Items">
-    <p>{{item.nombre}}</p>
-    <ion-card>
-      <img src={{item.nombre}} />
-      <ion-card-header>
-        <ion-card-title>{{item.nombre}}</ion-card-title>
-      </ion-card-header>
-    
-      <ion-card-content>{{item.precio}}</ion-card-content>
-    </ion-card>
-  </ion-item>
-  
-  
+<ion-list>
+    <ion-item *ngFor="let item of Items">
+      <ion-card>
+        <img src={{item.imagen_1}}>
+        <ion-card-header>
+          <ion-card-title>{{item.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>{{item.precio}}</ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
 </ion-content>
+    
+

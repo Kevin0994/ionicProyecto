@@ -1,3 +1,33 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-content>
+      <div class="menu-header-bg">Menu</div>
+      <div class="header-content">
+        <img src="../assets/icon/logoprincipal.png" alt="">
+        <ion-label>
+          <h2>JM</h2>
+          <p>Boutique</p>
+        </ion-label>
+      </div>
+      <!--<div class="action-button">
+        <ion-button>
+          <ion-icon name="home-outline"></ion-icon>
+        </ion-button>
+      </div> !-->
+
+      <ion-list class="menu-items" lines="none">
+        <ion-item class="active">
+          <ion-icon name="shirt-outline"></ion-icon>Mujeres
+        </ion-item>
+        <ion-item>
+          <ion-icon name="flash-outline"></ion-icon>Hombres
+        </ion-item>
+        <ion-item>
+          <ion-icon name="pie-chart-outline"></ion-icon>Ninos
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
