@@ -16,6 +16,11 @@
         <img src={{item.imagen_1}}>
         <ion-card-header>
           <ion-card-title>{{item.nombre}}</ion-card-title>
+          <ion-buttons (click)="EliminarCarrito(item.idcarrito)">
+            <ion-button>
+              <ion-icon  name="trash"></ion-icon>
+            </ion-button>
+          </ion-buttons>
         </ion-card-header>
         <ion-card-content>{{item.precio}}</ion-card-content>
       </ion-card>

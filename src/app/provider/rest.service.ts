@@ -169,4 +169,16 @@ export class RestProvider {
       });
     });
   }
+
+  EliminarCarrito(form:any):Observable<any>{
+    var api_url="https://warm-sea-68535.herokuapp.com/carritos/"+form+"/";
+    var Options = {
+      headers: new HttpHeaders({
+        'Accept': 'application/json',
+      }),
+      body: form,
+    }
+    return this.http.delete<any>(api_url,Options)
+  }
+
 }
