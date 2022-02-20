@@ -13,9 +13,12 @@ export class DetallesProductoPage implements OnInit {
   Items:any;
 
   constructor(public proveedor: RestProvider,
-    public modalController:ModalController,) { }
+    public modalController:ModalController,) { 
+      
+    }
 
-  ngOnInit() {console.log(this.Producto);
+  ngOnInit() {
+    console.log(this.Producto);
     this.loadInfo(this.Producto.idTallas);
   }
 
