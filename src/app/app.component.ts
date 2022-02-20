@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { RestProvider } from './provider/rest.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+
+
+  constructor(public proveedor: RestProvider,
+    public navCtrl:NavController) {}
+
+  TipoRest(tipo:string){
+    this.proveedor.tipo=tipo;
+    this.navCtrl.navigateRoot('tabs/home');
+  }
+
 }

@@ -16,14 +16,17 @@
       </div> !-->
 
       <ion-list class="menu-items" lines="none">
-        <ion-item class="active">
+        <ion-item (click)="TipoRest('')" class="active">
+          <ion-icon name="shirt-outline"></ion-icon>Todo
+        </ion-item>
+        <ion-item (click)="TipoRest('Mujer')" class="active">
           <ion-icon name="shirt-outline"></ion-icon>Mujeres
         </ion-item>
-        <ion-item>
+        <ion-item (click)="TipoRest('Hombre')">
           <ion-icon name="flash-outline"></ion-icon>Hombres
         </ion-item>
         <ion-item>
-          <ion-icon name="pie-chart-outline"></ion-icon>Ninos
+          <ion-icon (click)="TipoRest('Niño')" name="pie-chart-outline"></ion-icon>Ninos
         </ion-item>
       </ion-list>
     </ion-content>

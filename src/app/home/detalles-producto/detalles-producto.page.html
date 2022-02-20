@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary" slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon name="arrow-back-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{Producto.nombre}}</ion-card-title>
+      <ion-img [src]= "Producto.imagen_1">  </ion-img>
+    </ion-card-header>
+  
+    <ion-card-content>{{Producto.descripcion_producto}}
+    </ion-card-content>
+    <h2>Talla</h2>
+    <ion-label>{{Items[0].nombre}}</ion-label>
+    <ion-label>{{Items[0].medidas}}</ion-label>
+  </ion-card>
+</ion-content>

@@ -7,35 +7,10 @@
     </ion-toolbar>
 </ion-header>
 
-<div>
-  <ion-segment scrollable value="heart">
-    <ion-segment-button value="vestidos">
-      Vestidos
-    </ion-segment-button>
-    <ion-segment-button value="faldas">
-      Faldas
-    </ion-segment-button>
-    <ion-segment-button value="tops">
-      Tops
-    </ion-segment-button>
-    <ion-segment-button value="pantalones">
-      Pantalones
-    </ion-segment-button>
-    <ion-segment-button value="shorts">
-      Shorts
-    </ion-segment-button>
-    <ion-segment-button value="blusas">
-      Blusas
-    </ion-segment-button>
-    <ion-segment-button value="sandalias">
-      Sandalias
-    </ion-segment-button>
-  </ion-segment>
-</div>
 
 <ion-content padding>
 <ion-list>
-    <ion-item *ngFor="let item of Items">
+    <ion-item *ngFor="let item of Items" (click)="openModal(item)">
       <ion-card>
         <img src={{item.imagen_1}}>
         <ion-card-header>

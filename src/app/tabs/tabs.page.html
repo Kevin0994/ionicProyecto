@@ -1,5 +1,32 @@
-<ion-tabs>
 
+
+<ion-tabs>
+  <div>
+    <ion-segment scrollable value="heart">
+      <ion-segment-button [routerLink]="['/tabs/home']" value="sandalias">
+        Todo
+      </ion-segment-button>
+      <ion-segment-button [routerLink]="['/tabs/vestidos']" value="vestidos">
+        Vestidos
+      </ion-segment-button>
+      <ion-segment-button [routerLink]="['/tabs/faldas']" value="faldas">
+        Faldas
+      </ion-segment-button>
+      <ion-segment-button [routerLink]="['/tabs/tops']" value="tops">
+        Tops
+      </ion-segment-button>
+      <ion-segment-button [routerLink]="['/tabs/pantalones']" value="pantalones">
+        Pantalones
+      </ion-segment-button>
+      <ion-segment-button [routerLink]="['/tabs/shorts']" value="shorts">
+        Shorts
+      </ion-segment-button>
+      <ion-segment-button [routerLink]="['/tabs/blusas']" value="blusas">
+        Blusas
+      </ion-segment-button>
+      
+    </ion-segment>
+  </div>
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="home">
       <ion-icon name="home-outline"></ion-icon>

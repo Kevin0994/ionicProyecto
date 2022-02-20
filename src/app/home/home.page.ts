@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AlertController, NavController } from '@ionic/angular';
+import { AlertController, ModalController, NavController } from '@ionic/angular';
 import { RestProvider } from '../provider/rest.service';
+import { DetallesProductoPage } from './detalles-producto/detalles-producto.page';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ export class HomePage {
   
   constructor(public proveedor: RestProvider,
     public alertController: AlertController,
-    public navCtrl:NavController) {
+    public navCtrl:NavController,
+    public modalController:ModalController) {
       this.loadInfo();
   }
 
@@ -27,6 +29,15 @@ export class HomePage {
     })
   }
 
-  
+  async openModal(producto:any){
+    const modal = await this.modalController.create({
+      component: DetallesProductoPage,
+      cssClass: 'my-class-modal',
+      componentProps:{
+        'Producto':producto,
+      }
+    });
+    return await modal.present();
+  }
 
 }
