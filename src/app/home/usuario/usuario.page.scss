@@ -1,0 +1,87 @@
+ion-toolbar {
+    --background: var(--ion-color-background);
+    ion-title {
+       color: #fff;
+       font-weight: bold;
+  }
+}
+  
+  ion-content {
+    --background: var(--ion-color-background);
+    .content-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ion-button {
+        --background: linear-gradient(70deg, #7633a4 5%, #4834a6 70%);
+      }
+    }
+  
+  
+    .content-info {
+      padding: 0.5rem 2rem;
+  
+      ion-item {
+        border-radius: 1.5rem;
+        padding: 0;
+      }
+    }
+  
+    .buttons-action__save {
+        --background: #2674f3ed;
+      }
+    
+    .buttons-action__cancel {
+    --background: rgba(255, 47, 47, 0.794);
+
+    }
+
+    .buttons-action__cancel2{
+        padding-left: 17%;
+    }
+
+    
+  }
+  
+  input[disabled] {
+    color: white;
+    background: transparent;
+    border: 0;
+    padding: 0.3rem 0;
+  }
+  
+  input {
+    border-radius: 1rem;
+    background: #161525;
+    width: 100%;
+    margin: 0.3rem auto 1rem auto;
+    padding: 0.6rem 0.5rem;
+    border: 0.1rem solid #b88932cc;
+    outline: none;
+  }
+  
+  label {
+    color: #f3b748cc;
+    font-weight: bold;
+  }
+  
+  .content-popover {
+    --border-radius: 3rem;
+  
+    ion-list {
+      background: var(--ion-color-background);
+    }
+    ion-list-header {
+      color: #fff;
+    }
+    ion-icon  {
+      color: #fff;
+    }
+    ion-item {
+      --background: var(--ion-color-background);
+      color: #fff;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+  }
+

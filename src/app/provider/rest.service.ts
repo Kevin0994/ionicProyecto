@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 
 
@@ -53,6 +54,37 @@ export class RestProvider {
       }).closed;
     });
   }
+
+  ActualizarCliente(form:any){
+    var api_url="https://warm-sea-68535.herokuapp.com/clientes/"+localStorage.getItem('Usuario')+"/"
+    return new Promise(resolve => {
+      this.http.put(api_url,form).subscribe(data => {
+        resolve(data);
+        return this.status=true;
+      }, err => {
+        this.status=false;
+        resolve(err);
+        if(err.status == 400){
+          return this.error=400
+        }else{
+          return this.error=0
+        }
+      }).closed;
+    });
+  }
+
+  EliminarCuenta(form:any):Observable<any>{
+    var api_url="https://warm-sea-68535.herokuapp.com/clientes/"+form+"/";
+    var Options = {
+      headers: new HttpHeaders({
+        'Accept': 'application/json',
+      }),
+      body: form,
+    }
+    return this.http.delete<any>(api_url,Options)
+  }
+
+  
 
   loadProductos(){
     var api_url="https://warm-sea-68535.herokuapp.com/vista_productos/";

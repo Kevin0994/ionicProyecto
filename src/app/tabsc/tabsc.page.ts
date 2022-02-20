@@ -3,11 +3,11 @@ import { AlertController, NavController } from '@ionic/angular';
 import { RestProvider } from '../provider/rest.service';
 
 @Component({
-  selector: 'app-tabs',
-  templateUrl: './tabs.page.html',
-  styleUrls: ['./tabs.page.scss'],
+  selector: 'app-tabsc',
+  templateUrl: './tabsc.page.html',
+  styleUrls: ['./tabsc.page.scss'],
 })
-export class TabsPage implements OnInit {
+export class TabscPage implements OnInit {
 
   constructor(public proveedor: RestProvider,
     public alertController: AlertController,
@@ -16,10 +16,6 @@ export class TabsPage implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  redireccionar(url:string){
-    this.navCtrl.navigateRoot('tabs/'+url);
   }
 
   inicio(){

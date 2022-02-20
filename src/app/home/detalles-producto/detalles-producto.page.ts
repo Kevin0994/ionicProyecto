@@ -1,5 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
 import { RestProvider } from 'src/app/provider/rest.service';
 
 @Component({
@@ -13,7 +13,8 @@ export class DetallesProductoPage implements OnInit {
   Items:any;
 
   constructor(public proveedor: RestProvider,
-    public modalController:ModalController,) { 
+    public modalController:ModalController,
+    public navCtrl:NavController,) { 
       
     }
 
@@ -34,6 +35,12 @@ export class DetallesProductoPage implements OnInit {
     }).catch(data => {
       console.log(data);
     })
+  }
+
+  Agregar(){
+    localStorage.setItem('MiCarrito', JSON.stringify(this.Producto));
+    console.log(localStorage.getItem('MiCarrito'));
+    this.closeModal();
   }
 
 }

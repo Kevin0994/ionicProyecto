@@ -10,6 +10,18 @@ const routes: Routes = [
   },  {
     path: 'detalles-producto',
     loadChildren: () => import('./detalles-producto/detalles-producto.module').then( m => m.DetallesProductoPageModule)
+  },
+  {
+    path: 'usuario',
+    loadChildren: () => import('./usuario/usuario.module').then( m => m.UsuarioPageModule)
+  },
+  {
+    path: 'carrito',
+    loadChildren: () => import('./carrito/carrito.module').then( m => m.CarritoPageModule)
+  },
+  {
+    path: 'miscompras',
+    loadChildren: () => import('./miscompras/miscompras.module').then( m => m.MiscomprasPageModule)
   }
 
 

@@ -6,29 +6,29 @@
       <ion-segment-button [routerLink]="['/tabs/home']" value="sandalias">
         Todo
       </ion-segment-button>
-      <ion-segment-button [routerLink]="['/tabs/vestidos']" value="vestidos">
+      <ion-segment-button (click)="redireccionar('vestidos')" value="vestidos">
         Vestidos
       </ion-segment-button>
-      <ion-segment-button [routerLink]="['/tabs/faldas']" value="faldas">
+      <ion-segment-button (click)="redireccionar('faldas')" value="faldas">
         Faldas
       </ion-segment-button>
-      <ion-segment-button [routerLink]="['/tabs/tops']" value="tops">
+      <ion-segment-button (click)="redireccionar('tops')" value="tops">
         Tops
       </ion-segment-button>
-      <ion-segment-button [routerLink]="['/tabs/pantalones']" value="pantalones">
+      <ion-segment-button (click)="redireccionar('pantalones')" value="pantalones">
         Pantalones
       </ion-segment-button>
-      <ion-segment-button [routerLink]="['/tabs/shorts']" value="shorts">
+      <ion-segment-button (click)="redireccionar('shorts')" value="shorts">
         Shorts
       </ion-segment-button>
-      <ion-segment-button [routerLink]="['/tabs/blusas']" value="blusas">
+      <ion-segment-button (click)="redireccionar('blusas')" value="blusas">
         Blusas
       </ion-segment-button>
       
     </ion-segment>
   </div>
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="home">
+    <ion-tab-button tab="home" (click)="inicio()">
       <ion-icon name="home-outline"></ion-icon>
       <ion-label>Inicio</ion-label>
       <ion-badge>6</ion-badge>

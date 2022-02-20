@@ -48,6 +48,7 @@ export class LoginPage implements OnInit {
     if(this.Cliente.length != 0){
       if(this.Cliente[0].correo == form.correo && this.Cliente[0].password == form.password){
         localStorage.setItem('ingresado','true');
+        localStorage.setItem('Usuario',this.Cliente[0].idcliente);
         this.navCtrl.navigateRoot('tabs/home');
       }else{
         const alert = await this.alertController.create({

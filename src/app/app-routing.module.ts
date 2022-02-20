@@ -24,6 +24,14 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
   },
+  {
+    path: 'usuario',
+    loadChildren: () => import('./home/usuario/usuario.module').then( m => m.UsuarioPageModule)
+  },  {
+    path: 'tabsc',
+    loadChildren: () => import('./tabsc/tabsc.module').then( m => m.TabscPageModule)
+  },
+
 
 ];
 

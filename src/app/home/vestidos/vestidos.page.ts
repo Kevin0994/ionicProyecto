@@ -26,6 +26,7 @@ export class VestidosPage implements OnInit {
   loadInfo(){
     var categoria = "Vestidos"
     var tipo = this.proveedor.tipo;
+    console.log(tipo);
     if(tipo == ""){
       this.proveedor.BuscarProductos(categoria).then(data => {
         this.Items=data;
