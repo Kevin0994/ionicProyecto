@@ -1,5 +1,6 @@
 import { Component,Input, OnInit } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
+import { Carrito } from 'src/app/models/carrito.interface';
 import { RestProvider } from 'src/app/provider/rest.service';
 
 @Component({
@@ -10,6 +11,8 @@ import { RestProvider } from 'src/app/provider/rest.service';
 export class DetallesProductoPage implements OnInit {
 
   @Input() Producto: any;
+  public carrito:Carrito;
+
   Items:any;
 
   constructor(public proveedor: RestProvider,
@@ -37,9 +40,16 @@ export class DetallesProductoPage implements OnInit {
   }
 
   Agregar(){
-    // var Array = [this.Producto]
-    // localStorage.setItem('MiCarrito', JSON.stringify(Array));
-    // console.log(localStorage.getItem('MiCarrito'));
+    this.carrito = {
+      idcliente:parseInt(localStorage.getItem('Usuario')),
+      idproducto: this.Producto.idProducto,
+    }
+    this.proveedor.InsertarCarrito(this.carrito).then(data=>{
+      console.log(data);
+    }).catch(data => {
+      console.log(data);
+    });
+    window.location.reload();
     this.closeModal();
   }
 

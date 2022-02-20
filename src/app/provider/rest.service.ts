@@ -141,4 +141,32 @@ export class RestProvider {
     });
   }
 
+  InsertarCarrito(form:any){
+    var api_url="https://warm-sea-68535.herokuapp.com/carritos/"
+    return new Promise(resolve => {
+      this.http.post(api_url,form).subscribe(data => {
+        resolve(data);
+        return this.status=true;
+      }, err => {
+        this.status=false;
+        resolve(err);
+        if(err.status == 400){
+          return this.error=400
+        }else{
+          return this.error=0
+        }
+      }).closed;
+    });
+  }
+
+  BuscarCarrito(id:any){
+    var api_url="https://warm-sea-68535.herokuapp.com/vista_carritos/?search="+id
+    return new Promise(resolve => {
+      this.http.get(api_url).subscribe(data => {
+        resolve(data);
+      }, err => {
+        console.log(err);
+      });
+    });
+  }
 }
