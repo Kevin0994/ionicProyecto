@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductoGet } from 'src/app/models/producto.interface';
 
 @Component({
   selector: 'app-carrito',
@@ -7,13 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarritoPage implements OnInit {
 
-  public Items:any[];
+  public Items:any;
   constructor() { }
 
   ngOnInit() {
-    var array = localStorage.getItem('MiCarrito');
-    this.Items=JSON.parse(array);
-    console.log(this.Items);
+    
   }
 
 }

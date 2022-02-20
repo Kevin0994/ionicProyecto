@@ -15,7 +15,6 @@ export class DetallesProductoPage implements OnInit {
   constructor(public proveedor: RestProvider,
     public modalController:ModalController,
     public navCtrl:NavController,) { 
-      
     }
 
   ngOnInit() {
@@ -38,8 +37,9 @@ export class DetallesProductoPage implements OnInit {
   }
 
   Agregar(){
-    localStorage.setItem('MiCarrito', JSON.stringify(this.Producto));
-    console.log(localStorage.getItem('MiCarrito'));
+    // var Array = [this.Producto]
+    // localStorage.setItem('MiCarrito', JSON.stringify(Array));
+    // console.log(localStorage.getItem('MiCarrito'));
     this.closeModal();
   }
 

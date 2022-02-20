@@ -19,6 +19,11 @@ export class HomePage {
       this.loadInfo();
   }
 
+  
+  ionViewWillEnter(){
+    this.loadInfo();
+  }
+
   loadInfo(){
     this.proveedor.loadProductos().then(data => {
       this.Items=data;

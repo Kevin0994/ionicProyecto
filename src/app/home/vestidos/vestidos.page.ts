@@ -16,11 +16,15 @@ export class VestidosPage implements OnInit {
     public alertController: AlertController,
     public navCtrl:NavController,
     public modalController:ModalController,) {
-      this.loadInfo();
+      
   }
 
   ngOnInit() {
-    
+    this.loadInfo();
+  }
+
+  ionViewWillEnter(){
+    this.loadInfo();
   }
 
   loadInfo(){
@@ -46,12 +50,12 @@ export class VestidosPage implements OnInit {
     }
   }
 
-  async openModal(id:any){
+  async openModal(producto:any){
     const modal = await this.modalController.create({
       component: DetallesProductoPage,
       cssClass: 'my-class-modal',
       componentProps:{
-        'idPost':id,
+        'Producto':producto,
       }
     });
     return await modal.present();

@@ -25,6 +25,7 @@ export class UsuarioPage implements OnInit {
     public sanitizer: DomSanitizer,) { 
       this.formRegistro = this.crateForm();
     }
+    
     ngOnInit() {
       this.formRegistro = this.crateForm();
       this.loadInfo();

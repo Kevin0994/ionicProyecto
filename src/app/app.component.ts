@@ -15,7 +15,6 @@ export class AppComponent {
 
   TipoRest(tipo:string){
     this.proveedor.tipo=tipo;
-    console.log(this.proveedor.tipo);
     this.navCtrl.navigateRoot('tabs/home');
   }
 

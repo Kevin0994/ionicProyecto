@@ -36,7 +36,7 @@ export class TabscPage implements OnInit {
         }, {
           text: 'Si',
           handler: () => {
-            localStorage.removeItem('ingresado');
+            localStorage.clear();
             this.navCtrl.navigateRoot('login');
           }
         }
