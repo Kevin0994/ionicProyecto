@@ -1,3 +1,9 @@
+.in{
+  text-align: center;
+  width: 30%;
+  height: 10%;
+  margin-left: 30%;
+}
 #container {
   text-align: center;
 
@@ -24,4 +30,20 @@
 
 #container a {
   text-decoration: none;
+}
+ion-content{
+  --background: linear-gradient(#f3f2b3, #f3f2b3);
+
+  .icontent{
+    display: flex;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 10%;
+  }
+  .cento{
+    width: 80%;
+  }
+  .col{
+    background-color: #eedac7;
+  }
 }

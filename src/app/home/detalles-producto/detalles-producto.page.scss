@@ -1,10 +1,49 @@
-.buttons-action__save {
-    --background: #2674f3ed;
-    font-size: 13px;
-    padding-left: 2%;
-  }
+.in{
+  text-align: center;
+  width: 30%;
+  height: 10%;
+  margin-left: 30%;
+}
+#container {
+  text-align: center;
 
-  .buttons-action__cancel {
-    --background: rgba(255, 47, 47, 0.794);
-    font-size: 13px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+ion-content{
+  --background: linear-gradient(#f3f2b3, #f3f2b3);
+
+  .icontent{
+    display: flex;
+    margin-left: 20%;
+    margin-top: 5%;
+    margin-right: 10%;
   }
+  .cento{
+    width: 80%;
+  }
+  .col{
+    background-color: #eedac7;
+  }
+}

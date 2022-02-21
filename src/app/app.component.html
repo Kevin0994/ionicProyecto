@@ -19,21 +19,17 @@
           <ion-item [routerLink]="['/usuario']" class="active">
             <ion-icon name="person-outline"></ion-icon>Perfil
           </ion-item>
-          <ion-item (click)="TipoRest('')" class="active">
+          <ion-item (click)="TipoRest('')" [routerLink]="['tabs/home']" class="active">
             <ion-icon name="shirt-outline"></ion-icon>Todo
           </ion-item>
-          <ion-item (click)="TipoRest('Mujer')" class="active">
+          <ion-item (click)="TipoRest('Mujer')" [routerLink]="['tabs/home']" class="active">
             <ion-icon name="shirt-outline"></ion-icon>Mujeres
           </ion-item>
-          <ion-item (click)="TipoRest('Hombre')">
+          <ion-item (click)="TipoRest('Hombre')" [routerLink]="['tabs/home']" class="active">
             <ion-icon name="flash-outline"></ion-icon>Hombres
-          </ion-item>
-          <ion-item>
-            <ion-icon (click)="TipoRest('Niño')" name="pie-chart-outline"></ion-icon>Ninos
           </ion-item>
         </ion-list>
       </ion-menu-toggle>
-      
     </ion-content>
 
   </ion-menu>
