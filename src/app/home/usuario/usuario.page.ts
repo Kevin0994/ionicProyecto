@@ -35,7 +35,6 @@ export class UsuarioPage implements OnInit {
     loadInfo(){
       this.proveedor.BuscarCliente(localStorage.getItem('Usuario')).then(data => {
         this.Usuario=data;
-        console.log(this.Usuario);
         this.formRegistro = this.crateForm();
       }).catch(data => {
         console.log(data);
